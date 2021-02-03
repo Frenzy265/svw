@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npm run lint && npm run prettier && react-scripts test",
+    "test:watch": "react-scripts test",
+    "test": "npm run lint && npm run prettier && react-scripts test --watchAll=false",
     "lint": "eslint . --ext .js",
     "eject": "react-scripts eject",
     "prettify": "prettier --write .",
