@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import Raute from "../assets/raute-transparent.gif";
 
-const Image = styled.button`
+const Image = styled.img`
   position: fixed;
   bottom: 15px;
   right: 15px;
