@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 --tertiary-color: #fff; // white
 --quaternary-color: #76787B; // grey
 --font-family: 'Istok Web', sans-serif;
+--default-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.16)
 }
 
 #root {
@@ -23,12 +24,13 @@ const GlobalStyle = createGlobalStyle`
 html {
     width: 100%;
     height: 100%;
-    background: var(----primary-color);
 }
 
 body {
     margin: 0;
     width: 100%;
+    background: var(--primary-color);
+    font-family: var(--font-family)
 
 }
 
