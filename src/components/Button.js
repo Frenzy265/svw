@@ -1,54 +1,37 @@
-import React from "react";
+import styled from "styled-components/macro";
+import PlayCircle from "./Circle";
 import PropTypes from "prop-types";
-import "./button.css";
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+const Button = styled.button`
+  height: 70px;
+  width: 300px;
+  border: none;
+  box-shadow: var(--default-box-shadow);
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  outline: none;
+
+  p {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+`;
+
+export const ListButton = ({ title, onClick }) => {
   return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <Button onClick={onClick}>
+      <PlayCircle />
+      <p>{title}</p>
+    </Button>
   );
 };
 
-Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
+ListButton.propTypes = {
+  title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: "medium",
-  onClick: undefined,
 };
