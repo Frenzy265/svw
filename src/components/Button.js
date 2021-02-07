@@ -3,7 +3,7 @@ import PlayCircle from "./Circle";
 import PropTypes from "prop-types";
 
 const Button = styled.button`
-  height: 70px;
+  height: 60px;
   width: 300px;
   border: none;
   box-shadow: var(--default-box-shadow);
@@ -16,7 +16,7 @@ const Button = styled.button`
   p {
     color: var(--secondary-color);
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0 15px;
     font-weight: bold;
   }
