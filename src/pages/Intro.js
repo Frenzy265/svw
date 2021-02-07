@@ -7,8 +7,8 @@ export const Intro = () => {
   return (
     <>
       <Header>
-        <h1>weserstadion</h1>
-        <h2>für dein zuhause</h2>
+        <h1>weserstadion.</h1>
+        <h2>für dein zuhause.</h2>
       </Header>
       <SongList />
       <Menue />
