@@ -1,6 +1,9 @@
 import styled from "styled-components/macro";
 import PlayCircle from "./Circle";
 import PropTypes from "prop-types";
+import PlayIcon from "../assets/icon-play.svg";
+import PauseIcon from "../assets/icon-pause.svg";
+import { useEffect, useState } from "react";
 
 const Button = styled.button`
   height: 60px;
@@ -23,14 +26,18 @@ const Button = styled.button`
 `;
 
 export const ListButton = ({ title, audiofile }) => {
-  function play() {
-    const audio = new Audio(audiofile);
-    audio.play();
-  }
+  const audioElement = new Audio(audiofile);
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audioElement.play() : audioElement.pause();
+  }, [playing]);
 
   return (
-    <Button onClick={play}>
-      <PlayCircle />
+    <Button onClick={toggle}>
+      <PlayCircle icon={playing ? PauseIcon : PlayIcon} />
       <p>{title}</p>
     </Button>
   );
