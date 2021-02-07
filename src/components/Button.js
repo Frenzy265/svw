@@ -26,14 +26,14 @@ const Button = styled.button`
 `;
 
 export const ListButton = ({ title, audiofile }) => {
-  const audioElement = new Audio(audiofile);
   const [playing, setPlaying] = useState(false);
 
   const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
+    const audioElement = new Audio(audiofile);
     playing ? audioElement.play() : audioElement.pause();
-  }, [playing]);
+  }, [playing, audiofile]);
 
   return (
     <Button onClick={toggle}>
