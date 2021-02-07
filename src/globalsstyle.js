@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
 --secondary-color: #00FF00; // light green
 --tertiary-color: #fff; // white
 --quaternary-color: #76787B; // grey
---font-family: 'Istok Web', sans-serif;
 --default-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.16)
 }
 
@@ -30,13 +29,11 @@ body {
     margin: 0;
     width: 100%;
     background: var(--primary-color);
-    font-family: var(--font-family)
-
 }
 
 input, button, li {
     font-size: 16px;
-    padding: 0px
+    padding: 0px;
 }
 
 `;
