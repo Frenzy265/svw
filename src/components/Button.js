@@ -22,9 +22,14 @@ const Button = styled.button`
   }
 `;
 
-export const ListButton = ({ title, onClick }) => {
+export const ListButton = ({ title, audiofile }) => {
+  function play() {
+    const audio = new Audio(audiofile);
+    audio.play();
+  }
+
   return (
-    <Button onClick={onClick}>
+    <Button onClick={play}>
       <PlayCircle />
       <p>{title}</p>
     </Button>
@@ -34,4 +39,5 @@ export const ListButton = ({ title, onClick }) => {
 ListButton.propTypes = {
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
+  audiofile: PropTypes.any,
 };
