@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import PlayIcon from "../assets/icon-play.svg";
 import PauseIcon from "../assets/icon-pause.svg";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 const Button = styled.button`
   height: 60px;
@@ -30,9 +31,10 @@ export const ListButton = ({ title, audiofile }) => {
 
   const toggle = () => setPlaying(!playing);
 
+  const audioElement = useRef(new Audio(audiofile));
+
   useEffect(() => {
-    const audioElement = new Audio(audiofile);
-    playing ? audioElement.play() : audioElement.pause();
+    playing ? audioElement.current.play() : audioElement.current.pause();
   }, [playing, audiofile]);
 
   return (
