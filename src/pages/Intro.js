@@ -9,7 +9,7 @@ export const Intro = () => {
     <>
       <Header>
         <h1>weserstadion.</h1>
-        <h2>für {name} zuhause.</h2>
+        <h2>für {name}´s zuhause.</h2>
       </Header>
       <SongList />
       <Menue />
