@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import PlayIcon from "../assets/icon-triangle.svg";
+import PropTypes from "prop-types";
 
 const Circle = styled.div`
   width: 60px;
@@ -14,18 +14,20 @@ const Circle = styled.div`
   box-shadow: var(--defaul-box-shadow);
 
   img {
-    width: 20px;
-    position: relative;
-    left: 7%;
+    height: 30px;
   }
 `;
 
-const PlayCircle = () => {
+const PlayerCircle = ({ icon }) => {
   return (
     <Circle>
-      <img src={PlayIcon} alt="Icon play" />
+      <img src={icon} alt="Icon" />
     </Circle>
   );
 };
 
-export default PlayCircle;
+export default PlayerCircle;
+
+PlayerCircle.propTypes = {
+  icon: PropTypes.any.isRequired,
+};
