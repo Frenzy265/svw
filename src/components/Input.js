@@ -48,7 +48,7 @@ export const Inputfield = () => {
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
-        <Button type="submit">Los gehts!</Button>
+        <Button type="submit">💚 🤍 💚</Button>
       </Form>
     </>
   );
