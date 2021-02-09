@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components/macro";
+import { useHistory } from "react-router-dom";
 
 const Form = styled.form`
   width: 300px;
@@ -33,10 +34,12 @@ const Button = styled.button`
 
 export const Inputfield = () => {
   const [name, setName] = useState("");
+  const history = useHistory();
 
   const handleSubmitName = (event) => {
     event.preventDefault();
     localStorage.setItem("Name", name);
+    history.push("/intro");
   };
 
   return (
