@@ -4,11 +4,12 @@ import { SongList } from "../components/Songlist";
 import { Menue } from "../components/Menue";
 
 export const Intro = () => {
+  const name = localStorage.getItem("Name");
   return (
     <>
       <Header>
         <h1>weserstadion.</h1>
-        <h2>für dein zuhause.</h2>
+        <h2>für {name} zuhause.</h2>
       </Header>
       <SongList />
       <Menue />
