@@ -7,7 +7,7 @@ function App() {
     <>
       <GlobalStyle />
       <Welcome />
-      {/* <Intro /> */}
+      <Intro />
     </>
   );
 }
