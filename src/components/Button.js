@@ -24,6 +24,13 @@ const Button = styled.button`
     margin: 0 15px;
     font-weight: bold;
   }
+
+  :active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 `;
 
 export const ListButton = ({ title, audiofile }) => {
