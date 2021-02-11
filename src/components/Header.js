@@ -4,12 +4,12 @@ const Header = styled.header`
   font-weight: bold;
   text-transform: uppercase;
   height: 120px;
-  margin: 15px;
+  margin: 30px 20px 20px;
   place-items: center;
 
   h1 {
     color: var(--tertiary-color);
-    font-size: 45px;
+    font-size: 40px;
     margin: 0;
   }
 
