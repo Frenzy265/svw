@@ -20,6 +20,11 @@ export const SongList = () => {
         <ListButton title={"Torhymne"} audiofile={Torhymne} />
         <ListButton title={"grün-weisse liebe"} audiofile={GWLiebe} />
       </Container>
+
+      {/* <GIF
+        src="https://media.giphy.com/media/5T05xjT4VgkYGpVmOE/giphy.gif"
+        alt="Giphy"
+      /> */}
     </>
   );
 };
