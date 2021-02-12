@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 import PropTypes from "prop-types";
 
-const Circle = styled.div`
+const Circle = styled.button`
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -12,22 +12,22 @@ const Circle = styled.div`
   justify-content: center;
   border: none;
   box-shadow: var(--defaul-box-shadow);
+  outline: none;
 
   img {
     height: 30px;
   }
 `;
 
-const PlayerCircle = ({ icon }) => {
+export const PlayCircle = ({ icon, onClick }) => {
   return (
-    <Circle>
+    <Circle onClick={onClick}>
       <img src={icon} alt="Icon" />
     </Circle>
   );
 };
 
-export default PlayerCircle;
-
-PlayerCircle.propTypes = {
+PlayCircle.propTypes = {
   icon: PropTypes.any.isRequired,
+  onClick: PropTypes.func,
 };

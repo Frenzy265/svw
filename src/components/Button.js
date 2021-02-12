@@ -1,18 +1,20 @@
 import styled from "styled-components/macro";
-import PlayCircle from "./Circle";
+import { PlayCircle } from "./Circle";
 import PropTypes from "prop-types";
 import PlayIcon from "../assets/icon-play.svg";
 import PauseIcon from "../assets/icon-pause.svg";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import IconReload from "../assets/icon-reload.svg";
 
-const Button = styled.button`
+const Button = styled.div`
   height: 60px;
   width: 300px;
   border: none;
   box-shadow: var(--default-box-shadow);
   background: var(--primary-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
   align-items: center;
   border-radius: 40px;
   outline: none;
@@ -23,7 +25,21 @@ const Button = styled.button`
     font-size: 14px;
     margin: 0 15px;
     font-weight: bold;
+    text-align: left;
   }
+
+  :active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+`;
+
+const ReloadButton = styled.button`
+  background: none;
+  border: none;
+  outline: none;
 `;
 
 export const ListButton = ({ title, audiofile }) => {
@@ -32,6 +48,12 @@ export const ListButton = ({ title, audiofile }) => {
 
   const toggle = () => {
     setPlaying(!playing);
+  };
+
+  const reload = () => {
+    audioElement.current.pause();
+    audioElement.current.currentTime = 0;
+    setPlaying(false);
   };
 
   useEffect(() => {
@@ -43,10 +65,15 @@ export const ListButton = ({ title, audiofile }) => {
   };
 
   return (
-    <Button onClick={toggle}>
-      <PlayCircle icon={playing ? PauseIcon : PlayIcon} />
-      <p>{title}</p>
-    </Button>
+    <>
+      <Button>
+        <PlayCircle onClick={toggle} icon={playing ? PauseIcon : PlayIcon} />
+        <p>{title}</p>
+        <ReloadButton onClick={reload}>
+          <img src={IconReload} alt="Icon reload" />
+        </ReloadButton>
+      </Button>
+    </>
   );
 };
 

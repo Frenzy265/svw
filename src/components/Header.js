@@ -4,19 +4,24 @@ const Header = styled.header`
   font-weight: bold;
   text-transform: uppercase;
   height: 120px;
-  margin: 15px;
-  place-items: center;
+  margin: 30px 20px 20px;
+  display: flex;
+  justify-content: center;
 
-  h1 {
-    color: var(--tertiary-color);
-    font-size: 45px;
-    margin: 0;
-  }
+  div {
+    text-align: left;
 
-  h2 {
-    color: var(--secondary-color);
-    font-size: 25px;
-    margin: 0;
+    h1 {
+      color: var(--tertiary-color);
+      font-size: 40px;
+      margin: 0;
+    }
+
+    h2 {
+      color: var(--secondary-color);
+      font-size: 25px;
+      margin: 0;
+    }
   }
 `;
 
