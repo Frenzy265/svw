@@ -5,18 +5,23 @@ const Header = styled.header`
   text-transform: uppercase;
   height: 120px;
   margin: 30px 20px 20px;
-  place-items: center;
+  display: flex;
+  justify-content: center;
 
-  h1 {
-    color: var(--tertiary-color);
-    font-size: 40px;
-    margin: 0;
-  }
+  div {
+    text-align: left;
 
-  h2 {
-    color: var(--secondary-color);
-    font-size: 25px;
-    margin: 0;
+    h1 {
+      color: var(--tertiary-color);
+      font-size: 40px;
+      margin: 0;
+    }
+
+    h2 {
+      color: var(--secondary-color);
+      font-size: 25px;
+      margin: 0;
+    }
   }
 `;
 
