@@ -1,30 +1,33 @@
 import { useState } from "react";
 import styled from "styled-components/macro";
 import { useHistory } from "react-router-dom";
+import IconArrow from "../assets/icon-arrow-circle.svg";
 
 const Form = styled.form`
-  width: 300px;
-  height: 50px;
+  width: 270px;
+  height: 70px;
   background: var(--primary-color);
   border: none;
   padding-left: 10px;
   outline: none;
-  margin-top: 70px;
+  margin-top: 90px;
+  display: flex;
 `;
 
 const Input = styled.input`
   width: 200px;
-  height: 50px;
+  height: 70px;
   background: var(--primary-color);
   color: var(--tertiary-color);
   font-weight: bold;
   border: none;
   padding-left: 15px;
   outline: none;
+  text-transform: uppercase;
+  align-items: center;
 
   ::placeholder {
     color: var(--tertiary-color);
-    font-weight: lighter;
   }
 `;
 
@@ -54,7 +57,9 @@ export const Inputfield = () => {
           onChange={(event) => setName(event.target.value)}
           required={true}
         />
-        <Button type="submit">💚 🤍 💚</Button>
+        <Button type="submit">
+          <img src={IconArrow} alt="Icon arrow" />
+        </Button>
       </Form>
     </>
   );
