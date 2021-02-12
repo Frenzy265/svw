@@ -6,7 +6,7 @@ export const Welcome = () => {
     <>
       <Textbox
         title={"Moin!"}
-        subtitle={"Willkommen im weserstadion für dein zu Hause."}
+        subtitle={"Willkommen in deinem weserstadion."}
       />
     </>
   );
