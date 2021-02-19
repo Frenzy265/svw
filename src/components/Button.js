@@ -42,11 +42,16 @@ const ReloadButton = styled.button`
   outline: none;
 `;
 
+const Gif = styled.img`
+  width: 90vw;
+  max-width: 500px;
+`;
+
 export const MusicButton = ({ title, audiofile }) => {
   const [playing, setPlaying] = useState(false);
   const audioElement = useRef(new Audio(audiofile));
 
-  const toggle = () => {
+  const toggleMusic = () => {
     setPlaying(!playing);
   };
 
@@ -68,7 +73,7 @@ export const MusicButton = ({ title, audiofile }) => {
     <>
       <Button>
         <PlayPauseCircle
-          onClick={toggle}
+          onClick={toggleMusic}
           icon={playing ? PauseIcon : PlayIcon}
         />
         <p>{title}</p>
@@ -80,8 +85,35 @@ export const MusicButton = ({ title, audiofile }) => {
   );
 };
 
+export const GifButton = ({ title, gifsrc }) => {
+  const [openGif, setOpenGif] = useState(false);
+
+  const toggleGif = () => {
+    setOpenGif(!openGif);
+  };
+
+  return (
+    <>
+      <Button>
+        <PlayPauseCircle
+          onClick={toggleGif}
+          icon={openGif ? PauseIcon : PlayIcon}
+        />
+        <p>{title}</p>
+      </Button>
+      {openGif ? <Gif src={gifsrc} alt="Giphy" /> : ""}
+    </>
+  );
+};
+
 MusicButton.propTypes = {
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   audiofile: PropTypes.any,
+};
+
+GifButton.propTypes = {
+  title: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  gifsrc: PropTypes.any,
 };
