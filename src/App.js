@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import GlobalStyle from "./globalsstyle";
-import { Intro } from "./pages/Intro";
+import { Music } from "./pages/Music";
 import { Welcome } from "./pages/Welcome";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
           <Route exact path="/">
             <Welcome />
           </Route>
-          <Route path="/intro">
-            <Intro />
+          <Route path="/music">
+            <Music />
           </Route>
         </Switch>
       </Router>

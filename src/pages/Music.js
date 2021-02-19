@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
-import { SongList } from "../components/Songlist";
+import { SongList } from "../components/List";
 import { Menue } from "../components/Menue";
 
-export const Intro = () => {
+export const Music = () => {
   const name = localStorage.getItem("Name");
   return (
     <>

@@ -44,7 +44,7 @@ export const Inputfield = () => {
   const handleSubmitName = (event) => {
     event.preventDefault();
     localStorage.setItem("Name", name);
-    history.push("/intro");
+    history.push("/music");
   };
 
   return (
