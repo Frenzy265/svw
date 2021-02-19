@@ -42,7 +42,7 @@ export const GifList = () => {
         />
         <GifButton
           title={"Aufreger"}
-          gifsrc={"https://media.giphy.com/media/jsOFJZkjE0Qr7X9DnX/giphy.gif"}
+          gifsrc={"https://media.giphy.com/media/mDBOdP8a0ZLmPp2g6B/giphy.gif"}
         />
       </Container>
     </>
