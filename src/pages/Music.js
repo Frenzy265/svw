@@ -9,7 +9,7 @@ export const Music = () => {
     <>
       <Header>
         <div>
-          <h1>weserstadion.</h1>
+          <h1>der sound</h1>
           <h2>für {name}´s zuhause.</h2>
         </div>
       </Header>
