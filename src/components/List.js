@@ -29,19 +29,19 @@ export const GifList = () => {
     <>
       <Container>
         <GifButton
-          title={"Pizza"}
+          title={"TOOOOOR"}
           gifsrc={"https://media.giphy.com/media/5T05xjT4VgkYGpVmOE/giphy.gif"}
         />
         <GifButton
-          title={"maxi"}
+          title={"Hilflos"}
           gifsrc={"https://media.giphy.com/media/2voFDiVpIYhWWS0Pbe/giphy.gif"}
         />
         <GifButton
-          title={"Pavlenka"}
+          title={"Die Wand"}
           gifsrc={"https://media.giphy.com/media/3ohhwAisko1nU3NHa0/giphy.gif"}
         />
         <GifButton
-          title={"Kohlfeldt"}
+          title={"Aufreger"}
           gifsrc={"https://media.giphy.com/media/jsOFJZkjE0Qr7X9DnX/giphy.gif"}
         />
       </Container>
