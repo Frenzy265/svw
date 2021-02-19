@@ -44,6 +44,7 @@ const ReloadButton = styled.button`
 
 const Gif = styled.img`
   width: 90vw;
+  max-width: 500px;
 `;
 
 export const MusicButton = ({ title, audiofile }) => {
