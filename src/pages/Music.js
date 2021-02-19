@@ -14,7 +14,7 @@ export const Music = () => {
         </div>
       </Header>
       <SongList />
-      <Menue />
+      <Menue path="/giphy" />
     </>
   );
 };
