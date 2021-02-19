@@ -11,7 +11,7 @@ const Image = styled.img`
   width: 100px;
   background: none;
   border: none;
-  animation: 1.6s infinite heartbeat;
+  animation: 2s infinite heartbeat;
 
   @keyframes heartbeat {
     0% {
