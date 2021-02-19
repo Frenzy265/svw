@@ -11,6 +11,25 @@ const Image = styled.img`
   width: 100px;
   background: none;
   border: none;
+  animation: 1.6s infinite heartbeat;
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 `;
 
 export const Menue = ({ path }) => {
