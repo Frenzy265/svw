@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { PlayCircle } from "./Circle";
+import { PlayPauseCircle } from "./Circle";
 import PropTypes from "prop-types";
 import PlayIcon from "../assets/icon-play.svg";
 import PauseIcon from "../assets/icon-pause.svg";
@@ -42,7 +42,7 @@ const ReloadButton = styled.button`
   outline: none;
 `;
 
-export const ListButton = ({ title, audiofile }) => {
+export const MusicButton = ({ title, audiofile }) => {
   const [playing, setPlaying] = useState(false);
   const audioElement = useRef(new Audio(audiofile));
 
@@ -67,7 +67,10 @@ export const ListButton = ({ title, audiofile }) => {
   return (
     <>
       <Button>
-        <PlayCircle onClick={toggle} icon={playing ? PauseIcon : PlayIcon} />
+        <PlayPauseCircle
+          onClick={toggle}
+          icon={playing ? PauseIcon : PlayIcon}
+        />
         <p>{title}</p>
         <ReloadButton onClick={reload}>
           <img src={IconReload} alt="Icon reload" />
@@ -77,7 +80,7 @@ export const ListButton = ({ title, audiofile }) => {
   );
 };
 
-ListButton.propTypes = {
+MusicButton.propTypes = {
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   audiofile: PropTypes.any,

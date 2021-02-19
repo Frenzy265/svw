@@ -19,7 +19,7 @@ const Circle = styled.button`
   }
 `;
 
-export const PlayCircle = ({ icon, onClick }) => {
+export const PlayPauseCircle = ({ icon, onClick }) => {
   return (
     <Circle onClick={onClick}>
       <img src={icon} alt="Icon" />
@@ -27,7 +27,7 @@ export const PlayCircle = ({ icon, onClick }) => {
   );
 };
 
-PlayCircle.propTypes = {
+PlayPauseCircle.propTypes = {
   icon: PropTypes.any.isRequired,
   onClick: PropTypes.func,
 };

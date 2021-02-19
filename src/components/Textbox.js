@@ -2,13 +2,6 @@ import styled from "styled-components/macro";
 import PropTypes from "prop-types";
 import { Inputfield } from "./Input";
 
-const Background = styled.div`
-  background-image: url("https://images.sportbuzzer.de/v1/photos/raw/04-05-2013-fussball-1-bundesliga-2012-2013-32-spieltag-sv-werder-bremen-ubersich/large-16-9");
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-`;
-
 const Headline = styled.h1`
   font-size: 100px;
   text-transform: uppercase;
@@ -38,12 +31,10 @@ const Span = styled.span`
 export const Textbox = ({ title, subtitle }) => {
   return (
     <>
-      <Background>
-        <Headline>{title}</Headline>
-        <br />
-        <Span>{subtitle}</Span>
-        <Inputfield />
-      </Background>
+      <Headline>{title}</Headline>
+      <br />
+      <Span>{subtitle}</Span>
+      <Inputfield />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { ListButton } from "./Button";
+import { MusicButton } from "./Button";
 import GWLiebe from "../assets/gw-liebe.mp3";
 import LGW from "../assets/lebenslang-gw-2019.mp3";
 import Nebelhorn from "../assets/Nebelhorn.mp3";
@@ -15,10 +15,10 @@ export const SongList = () => {
   return (
     <>
       <Container>
-        <ListButton title={"Einlaufmusik"} audiofile={LGW} />
-        <ListButton title={"Nebelhorn"} audiofile={Nebelhorn} />
-        <ListButton title={"Torhymne"} audiofile={Torhymne} />
-        <ListButton title={"grün-weisse liebe"} audiofile={GWLiebe} />
+        <MusicButton title={"Einlaufmusik"} audiofile={LGW} />
+        <MusicButton title={"Nebelhorn"} audiofile={Nebelhorn} />
+        <MusicButton title={"Torhymne"} audiofile={Torhymne} />
+        <MusicButton title={"grün-weisse liebe"} audiofile={GWLiebe} />
       </Container>
 
       {/* <GIF

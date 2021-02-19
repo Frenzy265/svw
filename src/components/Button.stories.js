@@ -1,13 +1,13 @@
 import React from "react";
-import { ListButton } from "./Button";
+import { MusicButton } from "./Button";
 
 export default {
-  title: "Example/ListButton",
+  title: "Example/MusicButton",
   parameters: { layout: "centered" },
-  component: ListButton,
+  component: MusicButton,
 };
 
-const Template = (args) => <ListButton {...args} />;
+const Template = (args) => <MusicButton {...args} />;
 
 export const Song = Template.bind({});
 Song.args = {
