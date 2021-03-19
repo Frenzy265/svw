@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import Header from "../components/Header";
+import { Menue } from "../components/Menue";
 import Schedule from "../components/Schedule/index";
 import { getMatchday } from "../data/matchday";
 
@@ -30,6 +31,7 @@ export const Matchday = () => {
               logo2={match?.Team2.TeamIconUrl}
             />
           ))}
+          <Menue path="/giphy" />
         </>
       )}
     </>
