@@ -1,38 +1,53 @@
 import styled from "styled-components/macro";
+import PropTypes from "prop-types";
 
 export const MatchesContainer = styled.ul`
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  color: var(--tertiary-color);
 `;
 
 export const MatchContainer = styled.li`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: none;
-  height: 60px;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  height: 40px;
   width: 100vw;
-  background: none;
+  background-color: ${(props) =>
+    props.highlight ? "var(--secondary-color)" : ""};
 `;
 
 export const TeamContainer = styled.div`
-  border: none;
-  height: 60px;
-  width: 50vw;
-  background: none;
   display: flex;
-  justify-content: space-around;
+  justify-self: start;
   align-items: center;
+  padding: 0 20px;
+
+  :nth-child(1) {
+    justify-self: end;
+  }
 
   img {
-    width: 25px;
-    height: 25px;
-    content: fit;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
   }
 
   p {
     color: var(--tertiary-color);
+    margin: 0 10px;
   }
 `;
+
+export const MatchResult = styled.div`
+  justify-self: center;
+
+  p {
+    color: var(--secondary-color);
+  }
+`;
+
+MatchContainer.propTypes = {
+  highlight: PropTypes.bool,
+};
