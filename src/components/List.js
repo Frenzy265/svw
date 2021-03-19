@@ -37,7 +37,7 @@ export const GifList = () => {
           gifsrc={"https://media.giphy.com/media/2voFDiVpIYhWWS0Pbe/giphy.gif"}
         />
         <GifButton
-          title={"Die Wand"}
+          title={"Die Krake"}
           gifsrc={"https://media.giphy.com/media/3ohhwAisko1nU3NHa0/giphy.gif"}
         />
         <GifButton
