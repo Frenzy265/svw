@@ -2,7 +2,15 @@ import React from "react";
 import { MatchContainer, MatchResult, TeamContainer } from "./scheduleElements";
 import PropTypes from "prop-types";
 
-const Schedule = ({ team1, logo1, team2, logo2, resultTeam1, resultTeam2 }) => {
+const Schedule = ({
+  team1,
+  logo1,
+  team2,
+  logo2,
+  resultTeam1,
+  resultTeam2,
+  finished,
+}) => {
   const highlight = false;
 
   return (
@@ -13,11 +21,7 @@ const Schedule = ({ team1, logo1, team2, logo2, resultTeam1, resultTeam2 }) => {
           <img src={logo1} alt={`Icon from ${team1}`} />
         </TeamContainer>
         <MatchResult>
-          {resultTeam1 ? (
-            <p>{`${resultTeam1} : ${resultTeam2}`}</p>
-          ) : (
-            <p>vs.</p>
-          )}
+          {finished ? <p>{`${resultTeam1} : ${resultTeam2}`}</p> : <p>vs.</p>}
         </MatchResult>
         <TeamContainer>
           <img src={logo2} alt={`Icon from ${team2}`} />
@@ -37,4 +41,5 @@ Schedule.propTypes = {
   logo2: PropTypes.string.isRequired,
   resultTeam1: PropTypes.number,
   resultTeam2: PropTypes.number,
+  finished: PropTypes.bool,
 };

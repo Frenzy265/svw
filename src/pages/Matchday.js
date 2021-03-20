@@ -10,7 +10,7 @@ export const Matchday = () => {
   const name = localStorage.getItem("Name");
   const { data: matches, status } = useQuery("matches", getMatchday);
 
-  // console.log(matches[7]);
+  // console.log(matches[0]);
 
   return (
     <>
@@ -32,6 +32,7 @@ export const Matchday = () => {
                 logo1={match.Team1.TeamIconUrl}
                 team2={match.Team2.ShortName}
                 logo2={match.Team2.TeamIconUrl}
+                finished={match.MatchIsFinished}
                 resultTeam1={match.MatchResults[0]?.PointsTeam1}
                 resultTeam2={match.MatchResults[0]?.PointsTeam2}
               />
