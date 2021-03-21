@@ -6,6 +6,7 @@ import { Giphy } from "./pages/Giphy";
 import { Matchday } from "./pages/Matchday";
 import { Music } from "./pages/Music";
 import { Welcome } from "./pages/Welcome";
+import NextMatch from "./pages/NextMatch";
 
 function App() {
   const queryClient = new QueryClient();
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/matchday">
               <Matchday />
+            </Route>
+            <Route path="/nextmatch">
+              <NextMatch />
             </Route>
             <Route path="/giphy">
               <Giphy />
