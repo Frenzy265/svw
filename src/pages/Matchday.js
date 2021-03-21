@@ -4,13 +4,13 @@ import Header from "../components/Header";
 import { Menue } from "../components/Menue";
 import Schedule from "../components/Schedule/index";
 import { MatchesContainer } from "../components/Schedule/scheduleElements";
-import { getMatchday } from "../data/matchday";
+import { getMatchday } from "../data/api";
 
 export const Matchday = () => {
   const name = localStorage.getItem("Name");
   const { data: matches, status } = useQuery("matches", getMatchday);
 
-  // console.log(matches[0]);
+  // console.log(matches);
 
   return (
     <>
@@ -38,7 +38,7 @@ export const Matchday = () => {
               />
             ))}
           </MatchesContainer>
-          <Menue path="/giphy" />
+          <Menue path="/nextmatch" />
         </>
       )}
     </>
