@@ -18,7 +18,7 @@ const NextMatch = () => {
           <Header>
             <div>
               <h1>{`${match.Group.GroupOrderID}. Spieltach!`}</h1>
-              <h2>{`In ${name}'s zuhause`}</h2>
+              <h2>{`In ${name}'s zuhause.`}</h2>
             </div>
           </Header>
 
