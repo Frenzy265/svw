@@ -1,6 +1,5 @@
 import styled from "styled-components/macro";
 import PropTypes from "prop-types";
-import { Inputfield } from "./Input";
 
 const Headline = styled.h1`
   font-size: 100px;
@@ -15,7 +14,7 @@ const Headline = styled.h1`
   box-decoration-break: clone;
 `;
 
-const Span = styled.span`
+const Subline = styled.h2`
   font-size: 30px;
   text-transform: uppercase;
   font-weight: bold;
@@ -33,8 +32,7 @@ export const Textbox = ({ title, subtitle }) => {
     <>
       <Headline>{title}</Headline>
       <br />
-      <Span>{subtitle}</Span>
-      <Inputfield />
+      <Subline>{subtitle}</Subline>
     </>
   );
 };
