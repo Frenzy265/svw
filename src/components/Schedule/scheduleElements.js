@@ -36,7 +36,7 @@ export const TeamContainer = styled.div`
 
   p {
     color: var(--tertiary-color);
-    margin: 0 10px;
+    margin: 0 5px;
   }
 `;
 
