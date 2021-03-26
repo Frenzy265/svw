@@ -10,6 +10,8 @@ export const Selector = styled.div`
     background: none;
     color: var(--secondary-color);
     font-size: 3rem;
+    outline: none;
+    cursor: pointer;
   }
 
   p {
