@@ -9,6 +9,7 @@ const Container = styled.div`
   display: grid;
   grid-gap: 15px;
   place-items: center;
+  margin-top: 50px;
 `;
 
 export const SongList = () => {
