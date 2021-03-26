@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 const Header = styled.header`
   font-weight: bold;
   text-transform: uppercase;
-  height: 120px;
+  height: 80px;
   margin: 30px 20px 20px;
   display: flex;
   justify-content: center;
