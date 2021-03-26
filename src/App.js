@@ -13,8 +13,16 @@ import { Music } from "./pages/Music";
 import { Welcome } from "./pages/Welcome";
 import NextMatch from "./pages/NextMatch";
 
+import { defaultQueryFn } from "./data/api";
+
 function App() {
-  const queryClient = new QueryClient();
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        queryFn: defaultQueryFn,
+      },
+    },
+  });
   const name = localStorage.getItem("Name");
 
   return (
