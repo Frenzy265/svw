@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Header from "../components/Header";
 import { Menue } from "../components/Menue";
 import Schedule from "../components/Schedule/index";
 import { MatchesContainer } from "../components/Schedule/scheduleElements";
-import { getMatchday } from "../data/api";
+import { Selector } from "../components/Selector";
+import * as IoIcon from "react-icons/io";
 
 export const Matchday = () => {
+  const [day, setDay] = useState("/");
   const name = localStorage.getItem("Name");
-  const { data: matches, status } = useQuery("matches", getMatchday);
-
-  // console.log(matches);
+  const { data: matches, status } = useQuery(day);
 
   return (
     <>
@@ -20,10 +20,28 @@ export const Matchday = () => {
         <>
           <Header>
             <div>
-              <h1>{matches[0]?.Group.GroupOrderID}. Spieltach!</h1>
+              <h1>Spieltach!</h1>
               <h2>für {name}´s zuhause.</h2>
             </div>
           </Header>
+          <Selector>
+            <button
+              onClick={() =>
+                setDay(`/2020/${matches[0]?.Group.GroupOrderID - 1}`)
+              }
+            >
+              <IoIcon.IoIosArrowDropleftCircle />
+            </button>
+            <p>{matches[0]?.Group.GroupOrderID}. Spieltach</p>
+            <button
+              onClick={() =>
+                setDay(`/2020/${matches[0]?.Group.GroupOrderID + 1}`)
+              }
+            >
+              <IoIcon.IoIosArrowDroprightCircle />
+            </button>
+          </Selector>
+
           <MatchesContainer>
             {matches?.map((match, index) => (
               <Schedule
@@ -38,7 +56,7 @@ export const Matchday = () => {
               />
             ))}
           </MatchesContainer>
-          <Menue path="/nextmatch" />
+          <Menue path="/giphy" />
         </>
       )}
     </>
