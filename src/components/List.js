@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { GifButton, MusicButton } from "./Button";
 import GWLiebe from "../assets/gw-liebe.mp3";
-import LGW from "../assets/lebenslang-gw-2019.mp3";
+import LGW from "../assets/Lebenslang-gw.mp3";
 import Nebelhorn from "../assets/Nebelhorn.mp3";
 import Torhymne from "../assets/Torhymne.mp3";
 
