@@ -1,5 +1,7 @@
-export const getMatchday = async () => {
-  const result = await fetch("https://www.openligadb.de/api/getmatchdata/bl1");
+export const defaultQueryFn = async ({ queryKey }) => {
+  const result = await fetch(
+    `https://www.openligadb.de/api/getmatchdata/bl1${queryKey}`
+  );
   const data = await result.json();
   return data;
 };

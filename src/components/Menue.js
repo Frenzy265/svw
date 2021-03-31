@@ -7,8 +7,8 @@ const Image = styled.img`
   position: fixed;
   bottom: 15px;
   right: 15px;
-  height: 130px;
-  width: 100px;
+  height: 100px;
+  width: 70px;
   background: none;
   border: none;
   animation: 2s infinite heartbeat;
