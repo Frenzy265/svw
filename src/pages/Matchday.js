@@ -27,7 +27,7 @@ export const Matchday = () => {
           <Selector>
             <button
               onClick={() =>
-                setDay(`/2020/${matches[0]?.Group.GroupOrderID - 1}`)
+                setDay(`/2022/${matches[0]?.Group.GroupOrderID - 1}`)
               }
             >
               <IoIcon.IoIosArrowDropleftCircle />
@@ -35,7 +35,7 @@ export const Matchday = () => {
             <p>{matches[0]?.Group.GroupOrderID}. Spieltach</p>
             <button
               onClick={() =>
-                setDay(`/2020/${matches[0]?.Group.GroupOrderID + 1}`)
+                setDay(`/2022/${matches[0]?.Group.GroupOrderID + 1}`)
               }
             >
               <IoIcon.IoIosArrowDroprightCircle />
