@@ -11,6 +11,9 @@ export const Matchday = () => {
   const [day, setDay] = useState("/");
   const name = localStorage.getItem("Name");
   const { data: matches, status } = useQuery(day);
+  const date = new Date();
+  const month = date.getMonth();
+  const year = month >= 6 ? date.getFullYear() : date.getFullYear() + 1;
 
   return (
     <>
@@ -27,7 +30,7 @@ export const Matchday = () => {
           <Selector>
             <button
               onClick={() =>
-                setDay(`/2020/${matches[0]?.Group.GroupOrderID - 1}`)
+                setDay(`/2022/${matches[0]?.Group.GroupOrderID - 1}`)
               }
             >
               <IoIcon.IoIosArrowDropleftCircle />
@@ -35,7 +38,7 @@ export const Matchday = () => {
             <p>{matches[0]?.Group.GroupOrderID}. Spieltach</p>
             <button
               onClick={() =>
-                setDay(`/2020/${matches[0]?.Group.GroupOrderID + 1}`)
+                setDay(`/${year}/${matches[0]?.Group.GroupOrderID + 1}`)
               }
             >
               <IoIcon.IoIosArrowDroprightCircle />
